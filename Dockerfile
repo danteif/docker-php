@@ -77,6 +77,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
 #Symfony cli
 
 RUN wget https://get.symfony.com/cli/installer -O - | bash
+RUN mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 
 #
 

@@ -1,2 +1,2 @@
-# Docker image for php7.4-apline
+# Docker image for php8.0.7-fpm-apline
 Just my Dockerfile
