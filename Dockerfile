@@ -38,7 +38,7 @@ RUN apk --no-cache add pcre-dev ${PHPIZE_DEPS} \
             zip \
             xml \
             pgsql \
-    &&  echo -e "\n xdebug.remote_enable=1 \n xdebug.remote_host=localhost \n xdebug.remote_port=9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
+    &&  echo -e "\n xdebug.mode=debug \n xdebug.client_host=localhost \n xdebug.client_port=9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     &&  echo -e "\n xhprof.output_dir='/var/tmp/xhprof'" >> /usr/local/etc/php/conf.d/docker-php-ext-xhprof.ini
 
 #INSTALL MHSENDMAIL (MAILHOG)
