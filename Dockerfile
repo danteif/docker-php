@@ -30,6 +30,8 @@ RUN apk --no-cache add pcre-dev ${PHPIZE_DEPS} \
             mysqli \
             pdo \
             pdo_mysql \
+            pdo_pgsql \
+            pdo_sqlite \
             soap \
             sysvsem \
             sysvshm \
@@ -38,6 +40,8 @@ RUN apk --no-cache add pcre-dev ${PHPIZE_DEPS} \
             zip \
             xml \
             pgsql \
+            sqlite3 \
+            redis \
     &&  echo -e "\n xdebug.mode=debug \n xdebug.client_host=localhost \n xdebug.client_port=9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
     &&  echo -e "\n xhprof.output_dir='/var/tmp/xhprof'" >> /usr/local/etc/php/conf.d/docker-php-ext-xhprof.ini
 
